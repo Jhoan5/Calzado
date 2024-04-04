@@ -1,0 +1,25 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+main {
+  display: grid;
+  place-items: center;
+}
+form {
+  width: 350px;
+  > div {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px;
+  }
+  > div:last-child {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+  }
+  select {
+    width: 177px;
+  }
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calzado</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <form action="facturas.php" method="post">
+        <div>
+          <label for="FECHA_EXPEDICION">Fecha de Expedición:</label>
+          <input
+            type="date"
+            name="FECHA_EXPEDICION"
+            id="FECHA_EXPEDICION"
+            required
+          />
+        </div>
+        <div>
+          <label for="FECHA_ENTREGA">Fecha de Entrega:</label>
+          <input type="date" name="FECHA_ENTREGA" id="FECHA_ENTREGA" required />
+        </div>
+        <div>
+          <label for="COD_CLIENTE">Código de Cliente:</label>
+          <input type="text" name="COD_CLIENTE" id="COD_CLIENTE" required />
+        </div>
+        <div>
+          <label for="COD_EMPLEADO">Código de Empleado:</label>
+          <input type="text" name="COD_EMPLEADO" id="COD_EMPLEADO" required />
+        </div>
+        <div>
+          <button type="submit">Guardar</button>
+        </div>
+      </form>
+    </main>
+  </body>
+</html>

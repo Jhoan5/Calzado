@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calzado</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <form action="productos.php" method="post">
+        <div>
+          <label for="COD_PROVEEDOR">Código de Proveedor:</label>
+          <input type="text" name="COD_PROVEEDOR" id="COD_PROVEEDOR" required />
+        </div>
+        <div>
+          <label for="Clasificacion">Clasificación:</label>
+          <select name="Clasificacion" id="Clasificacion">
+            <option value="vas vendido">Más Vendido</option>
+            <option value="menos vendido">Menos Vendido</option>
+            <option value="mas economico">Más Económico</option>
+            <option value="comida">Comida</option>
+            <option value="electrodomesticos">Electrodomésticos</option>
+            <option value="hogar">Hogar</option>
+          </select>
+        </div>
+        <div>
+          <label for="Descripcion">Descripción:</label>
+          <input type="text" name="Descripcion" id="Descripcion" required />
+        </div>
+        <div>
+          <label for="Cantidad_disponible">Cantidad Disponible:</label>
+          <input
+            type="text"
+            name="Cantidad_disponible"
+            id="Cantidad_disponible"
+            required
+          />
+        </div>
+        <div>
+          <label for="PRECIO_COMPRA">Precio de Compra:</label>
+          <input type="text" name="PRECIO_COMPRA" id="PRECIO_COMPRA" required />
+        </div>
+        <div>
+          <label for="PRECIO_VENTA">Precio de Venta:</label>
+          <input type="text" name="PRECIO_VENTA" id="PRECIO_VENTA" required />
+        </div>
+        <div>
+          <label for="FECHA_DE_INGRESO">Fecha de Ingreso:</label>
+          <input
+            type="date"
+            name="FECHA_DE_INGRESO"
+            id="FECHA_DE_INGRESO"
+            required
+          />
+        </div>
+        <div>
+          <label for="FECHA_DE_EXPIRACION">Fecha de Expiración:</label>
+          <input
+            type="date"
+            name="FECHA_DE_EXPIRACION"
+            id="FECHA_DE_EXPIRACION"
+            required
+          />
+        </div>
+        <div>
+          <button type="submit">Guardar</button>
+        </div>
+      </form>
+    </main>
+  </body>
+</html>
