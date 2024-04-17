@@ -10,7 +10,7 @@
 
 <body>
   <main>
-    <form action="nomina.php" method="post">
+    <form action="" method="post">
       <div>
         <label for="COD_EMPLEADO">Código de Empleado:</label>
         <input type="text" name="COD_EMPLEADO" id="COD_EMPLEADO" required />

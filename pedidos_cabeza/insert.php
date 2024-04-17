@@ -10,7 +10,7 @@
 
 <body>
   <main>
-    <form action="pedidos_cabeza.php" method="post">
+    <form action="" method="post">
       <div>
         <label for="COD_PROVEEDOR">Código de Proveedor:</label>
         <input type="text" name="COD_PROVEEDOR" id="COD_PROVEEDOR" required />

@@ -10,7 +10,7 @@
 
 <body>
   <main>
-    <form action="factura_cabeza.php" method="post">
+    <form action="" method="post">
       <div>
         <label for="FECHA_EXPEDICION">Fecha de Expedición:</label>
         <input type="date" name="FECHA_EXPEDICION" id="FECHA_EXPEDICION" required />
