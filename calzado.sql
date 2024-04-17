@@ -180,7 +180,7 @@ CREATE TABLE `pedidos_detalle` (
 CREATE TABLE `productos` (
   `COD_PRODUCTO` int(11) NOT NULL,
   `COD_PROVEEDOR` int(11) DEFAULT NULL,
-  `Clasificacion` enum('vas vendido','menos vendido','mas economico','comida','electrodomesticos','hogar') NOT NULL,
+  `Clasificacion` enum('mas vendido','menos vendido','mas economico','comida','electrodomesticos','hogar') NOT NULL,
   `Descripcion` varchar(100) NOT NULL,
   `Cantidad_disponible` int(11) NOT NULL,
   `PRECIO_COMPRA` double NOT NULL,
