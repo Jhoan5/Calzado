@@ -72,6 +72,7 @@
     VALUES ($codigo_proveedor, '$clasificacion', '$descripcion', $cantidad_disponible,
     $precio_compra, $precio_venta, '$fecha_ingreso', '$fecha_expiracion')";
       mysqli_query($conexion, $sql) or die(err($conexion));
+      echo "<p>producto guardado correctamente!</p>";
     }
     ?>
   </main>

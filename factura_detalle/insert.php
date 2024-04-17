@@ -77,6 +77,7 @@
       $sql = "INSERT INTO factura_detalle (FACTCAB_COD, METODO_PAGO, COD_PRODUCTO, CANTIDAD, PRECIO_VENTA, MONTO, SUBTOTAL, IVA, DESCUENTO, NETO_PAGAR)
     VALUES ($codigo_factura, '$metodo_pago', $codigo_producto, $cantidad, $precio_venta, $monto, $subtotal, $iva, $descuento, $neto_pagar)";
       mysqli_query($conexion, $sql) or die(err($conexion));
+      echo "<p>factura_detalle guardado correctamente!</p>";
     }
     ?>
   </main>

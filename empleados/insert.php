@@ -139,6 +139,7 @@
       $sql = "INSERT INTO empleados (NOMBRE_EMPLEADO, APELLIDO_EMPLEADO, ESTADO_CIVIL, TIPO_DOCUMENTO, NO_DOCUMENTO, DIRECCION_RESIDENCIA, FECHA_NACIMIENTO, SEXO, CORREO_ELECTRONICO, TIPO_CONTRATO, JORNADA, RH, FORMACION, EPS, COD_CARGO, NUMERO_CUENTA)
         VALUES ('$nombre_empleado', '$apellido_empleado', '$estado_civil', '$tipo_documento', '$numero_documento', '$direccion_residencia', '$fecha_nacimiento', '$sexo', '$correo_electronico', '$tipo_contrato', '$jornada', '$rh', '$nivel_formacion', '$eps', '$codigo_cargo', '$numero_cuenta')";
       mysqli_query($conexion, $sql) or die(err($conexion));
+      echo "<p>empleado guardado correctamente!</p>";
     }
 
     ?>

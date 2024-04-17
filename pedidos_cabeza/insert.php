@@ -39,6 +39,7 @@
     $sql = "INSERT INTO pedidos_cabeza (COD_PROVEEDOR, FECHA_PEDIDO, FECHA_ENTREGA)
     VALUES ('$codigo_proveedor', '$fecha_pedido', '$fecha_entrega')";
     mysqli_query($conexion, $sql) or die(err($conexion));
+    echo "<p>pedidos_cabeza guardado correctamente!</p>";
   }
   ?>
 </body>

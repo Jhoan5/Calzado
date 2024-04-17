@@ -79,6 +79,7 @@
     '$correo_electronico', '$ciudad', '$nombre_representante', '$telefono_representante',
     '$correo_representante')";
       mysqli_query($conexion, $sql) or die(err($conexion));
+      echo "<p>proveedor guardado correctamente!</p>";
     }
     ?>
   </main>
