@@ -5,11 +5,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Calzado</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="../style.css" />
 </head>
 
 <body>
   <main>
+    <h1>Agregar factura_detalle</h1>
     <form action="" method="post">
       <div>
         <label for="FACTCAB_COD">Código de la Factura:</label>

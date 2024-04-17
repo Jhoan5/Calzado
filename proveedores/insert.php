@@ -5,11 +5,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Calzado</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="../style.css" />
 </head>
 
 <body>
   <main>
+    <h1>Agregar proveedor</h1>
     <form action="" method="post">
       <div>
         <label for="RAZON_SOCIAL">Razón Social:</label>

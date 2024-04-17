@@ -5,11 +5,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Calzado</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="../style.css" />
 </head>
 
 <body>
   <main>
+    <h1>Agregar empleado</h1>
     <form action="" method="post">
       <div>
         <label for="NOMBRE_EMPLEADO">Nombre:</label>
