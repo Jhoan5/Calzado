@@ -13,7 +13,7 @@ function err($conexion)
 {
     return "Error: " . mysqli_error($conexion);
 }
-function make_table($arr, $registros, $tbname)
+function make_table($arr, $registros, $tbname, $cod = null)
 {
     // Iniciar la tabla
     echo "<table>";
@@ -33,7 +33,9 @@ function make_table($arr, $registros, $tbname)
         foreach ($arr as $columna) {
             echo "<td>{$reg[$columna]}</td>";
         }
-        $cod = $reg[strtoupper("cod_" . substr($tbname, 0, -1))];
+        if ($cod == null) {
+            $cod = $reg[strtoupper("cod_" . substr($tbname, 0, -1))];
+        }
         echo "<td><a href='update.php?cod=$cod'>Editar</a></td>"
             . "<td><a href='delete.php?cod=$cod'>Borrar</a></td>";
         echo "</tr>";

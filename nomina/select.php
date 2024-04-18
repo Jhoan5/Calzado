@@ -10,7 +10,7 @@
 
 <body>
     <main>
-        <h2>Buscar cliente</h2>
+        <h2>Buscar nomina</h2>
         <form action="" method="POST">
             <div>
                 <label for="opcion">Buscar por:</label>
@@ -28,23 +28,26 @@
         </form>
         <?php
         include '../a-main.php';
-        $arr = ["COD_CLIENTE", "NOMBRE_CLIENTE", "APELLIDO_CLIENTE", "TIPO_DOCUMENTO", "NO_DOCUMENTO", "TELEFONO", "DIRECCION", "CORREO_ELECTRONICO", "SEXO", "EDAD", "ESTADO_CIVIL"];
+        $arr = [
+            "COD_NOMINA", "COD_EMPLEADO", "SALARIO", "DIAS_TRABAJADOS", "SALARIO_BASE", "TIPO_HORAS_EXTRAS",
+            "CANTIDAD_HORAS_EXTRA", "VALOR_HORAS_EXTRAS", "COMISIONES", "AUXILIO_TRANSPORTE", "TOTAL_DEVENGADO", "SALUD", "PENSION", "PRESTAMOS", "TOTAL_DEDUCIDO", "NETO_PAGAR",
+        ];
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $input = $_POST["search"];
             $opcion = $_POST["opcion"];
             $conexion = conexion();
             if ($opcion == 'cod') {
-                $sql = "SELECT * FROM clientes WHERE cod_cliente = $input";
+                $sql = "SELECT * FROM nomina WHERE cod_nomina= $input";
             } elseif ($opcion == 'nombre') {
-                $sql = "SELECT * FROM clientes WHERE nombre = $input";
+                $sql = "SELECT * FROM nomina WHERE nombre = $input";
             }
             $registros = mysqli_query($conexion, $sql) or die(err($conexion));
-            make_table($arr, $registros, 'clientes');
+            make_table($arr, $registros, 'nomina', 'cod_nomina');
         } else {
             $conexion = conexion();
-            $sql = "SELECT * FROM clientes";
+            $sql = "SELECT * FROM nomina";
             $registros = mysqli_query($conexion, $sql) or die(err($conexion));
-            make_table($arr, $registros, 'clientes');
+            make_table($arr, $registros, 'nomina', 'cod_nomina');
         }
         ?>
     </main>

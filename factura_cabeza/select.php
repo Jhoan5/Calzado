@@ -10,7 +10,7 @@
 
 <body>
     <main>
-        <h2>Buscar cliente</h2>
+        <h2>Buscar factura_cabeza</h2>
         <form action="" method="POST">
             <div>
                 <label for="opcion">Buscar por:</label>
@@ -28,23 +28,23 @@
         </form>
         <?php
         include '../a-main.php';
-        $arr = ["COD_CLIENTE", "NOMBRE_CLIENTE", "APELLIDO_CLIENTE", "TIPO_DOCUMENTO", "NO_DOCUMENTO", "TELEFONO", "DIRECCION", "CORREO_ELECTRONICO", "SEXO", "EDAD", "ESTADO_CIVIL"];
+        $arr = ["COD_FACTURA", "FECHA_EXPEDICION", "FECHA_ENTREGA", "COD_CLIENTE", "COD_EMPLEADO"];
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $input = $_POST["search"];
             $opcion = $_POST["opcion"];
             $conexion = conexion();
             if ($opcion == 'cod') {
-                $sql = "SELECT * FROM clientes WHERE cod_cliente = $input";
+                $sql = "SELECT * FROM factura_cabeza WHERE cod_factura= $input";
             } elseif ($opcion == 'nombre') {
-                $sql = "SELECT * FROM clientes WHERE nombre = $input";
+                $sql = "SELECT * FROM factura_cabeza WHERE nombre = $input";
             }
             $registros = mysqli_query($conexion, $sql) or die(err($conexion));
-            make_table($arr, $registros, 'clientes');
+            make_table($arr, $registros, 'factura_cabeza', 'cod_factura');
         } else {
             $conexion = conexion();
-            $sql = "SELECT * FROM clientes";
+            $sql = "SELECT * FROM factura_cabeza";
             $registros = mysqli_query($conexion, $sql) or die(err($conexion));
-            make_table($arr, $registros, 'clientes');
+            make_table($arr, $registros, 'factura_cabeza', 'cod_factura');
         }
         ?>
     </main>
