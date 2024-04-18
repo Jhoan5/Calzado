@@ -15,7 +15,7 @@
         include '../a-main.php';
         # Delete
         $conexion = conexion();
-        $codigo = $_GET["cod_cargo"];
+        $codigo = $_GET["cod"];
         $sql = "DELETE FROM cargos WHERE COD_CARGO = $codigo";
         mysqli_query($conexion, $sql) or die(err($conexion));
         echo "<p>¡Cargo eliminado correctamente!</p>";

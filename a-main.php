@@ -34,8 +34,8 @@ function make_table($arr, $registros, $tbname)
             echo "<td>{$reg[$columna]}</td>";
         }
         $cod = $reg[strtoupper("cod_" . substr($tbname, 0, -1))];
-        echo "<td><a href='update.php?cod_cargo=$cod'>Editar</a></td>"
-            . "<td><a href='delete.php?cod_cargo=$cod'>Borrar</a></td>";
+        echo "<td><a href='update.php?cod=$cod'>Editar</a></td>"
+            . "<td><a href='delete.php?cod=$cod'>Borrar</a></td>";
         echo "</tr>";
     }
     echo "</tbody>";

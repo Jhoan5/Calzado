@@ -10,6 +10,7 @@
 
 <body>
   <main>
+    <h1>Agregar cargo</h1>
     <form action="" method="post">
       <div>
         <label for="NOM_CARGO">Nombre del Cargo:</label>

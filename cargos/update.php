@@ -21,6 +21,7 @@
         $salario_base = $reg['SALARIO_BASE'];
     ?>
         <main>
+            <h1>Actualizar cargo</h1>
             <form action="" method="POST">
                 <div>
                     <label for="NOM_CARGO">Nombre del Cargo:</label>

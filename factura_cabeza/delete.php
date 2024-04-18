@@ -16,9 +16,9 @@
         # Delete
         $conexion = conexion();
         $codigo = $_GET["cod"];
-        $sql = "DELETE FROM clientes WHERE COD_CLIENTE = $codigo";
+        $sql = "DELETE FROM factura_cabeza WHERE COD_FACTURA = $codigo";
         mysqli_query($conexion, $sql) or die(err($conexion));
-        echo "<p>cliente eliminado correctamente!</p>";
+        echo "<p>factura cabeza eliminado correctamente!</p>";
         ?>
     </main>
 </body>
