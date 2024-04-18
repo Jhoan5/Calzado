@@ -28,20 +28,20 @@
         <button type="submit">Guardar</button>
       </div>
     </form>
-  </main>
-  <?php
-  include '../a-main.php';
-  if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $codigo_proveedor = $_POST['COD_PROVEEDOR'];
-    $fecha_pedido = $_POST['FECHA_PEDIDO'];
-    $fecha_entrega = $_POST['FECHA_ENTREGA'];
-    $conexion = conexion();
-    $sql = "INSERT INTO pedidos_cabeza (COD_PROVEEDOR, FECHA_PEDIDO, FECHA_ENTREGA)
+    <?php
+    include '../a-main.php';
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+      $codigo_proveedor = $_POST['COD_PROVEEDOR'];
+      $fecha_pedido = $_POST['FECHA_PEDIDO'];
+      $fecha_entrega = $_POST['FECHA_ENTREGA'];
+      $conexion = conexion();
+      $sql = "INSERT INTO pedidos_cabeza (COD_PROVEEDOR, FECHA_PEDIDO, FECHA_ENTREGA)
     VALUES ('$codigo_proveedor', '$fecha_pedido', '$fecha_entrega')";
-    mysqli_query($conexion, $sql) or die(err($conexion));
-    echo "<p>pedidos_cabeza guardado correctamente!</p>";
-  }
-  ?>
+      mysqli_query($conexion, $sql) or die(err($conexion));
+      echo "<p>pedidos_cabeza guardado correctamente!</p>";
+    }
+    ?>
+  </main>
 </body>
 
 </html>

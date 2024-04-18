@@ -106,7 +106,7 @@
       $neto_pagar = $_POST['NETO_PAGAR'];
       $conexion = conexion();
       $sql = "INSERT INTO nomina (COD_EMPLEADO, SALARIO, DIAS_TRABAJADOS, SALARIO_BASE, TIPO_HORAS_EXTRAS, CANTIDAD_HORAS_EXTRA, VALOR_HORAS_EXTRAS, COMISIONES, AUXILIO_TRANSPORTE, TOTAL_DEVENGADO, SALUD, PENSION, PRESTAMOS, TOTAL_DEDUCIDO, NETO_PAGAR)
-            VALUES ($codigo_empleado, $salario, $dias_trabajados, $salario_base, '$tipo_horas_extras', $cantidad_horas_extra, $valor_horas_extras, $comisiones, $auxilio_transporte, $total_devengado, $salud, $pension, $prestamos, $total_deducido, $neto_pagar)";
+            VALUES ($codigo_empleado, $salario, $dias_trabajados, $salario_base, '$tipo_horas_extras', $cantidad_horas_extra, '$valor_horas_extras', $comisiones, $auxilio_transporte, $total_devengado, $salud, $pension, $prestamos, $total_deducido, $neto_pagar)";
       mysqli_query($conexion, $sql) or die(err($conexion));
       echo "<p>nomina guardado correctamente!</p>";
     }

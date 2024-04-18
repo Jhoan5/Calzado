@@ -43,7 +43,7 @@
       $sql = "INSERT INTO factura_cabeza (FECHA_EXPEDICION, FECHA_ENTREGA, COD_CLIENTE, COD_EMPLEADO)
             VALUES ('$fecha_expedicion', '$fecha_entrega', $codigo_cliente, $codigo_empleado)";
       mysqli_query($conexion, $sql) or die(err($conexion));
-      echo "<p>facturado_cabeza guardado correctamente!</p>";
+      echo "<p>factura_cabeza guardado correctamente!</p>";
     }
     ?>
   </main>

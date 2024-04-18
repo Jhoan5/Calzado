@@ -61,6 +61,7 @@
       </div>
     </form>
     <?php
+    include '../a-main.php';
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
       $razon_social = $_POST['RAZON_SOCIAL'];
       $tipo_documento = $_POST['TIPO_DOCUMENTO'];

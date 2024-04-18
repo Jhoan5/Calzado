@@ -74,7 +74,7 @@
     VALUES ('$codigo_factura_cabeza', $codigo_producto, $cantidad, $precio_unitario,
     '$tipo_de_pago', $subtotal, $descuento, $iva, $neto_a_pagar)";
       mysqli_query($conexion, $sql) or die(err($conexion));
-      echo "<p>pedidos_detalle guardado correctamente!</p>";
+      echo "<p>pedido_detalle guardado correctamente!</p>";
     }
     ?>
   </main>
