@@ -33,6 +33,7 @@
     $neto_pagar = $reg['NETO_PAGAR'];
   ?>
     <main>
+      <h2>Modificar nomina</h2>
       <form action="" method="post">
         <div>
           <label for="COD_EMPLEADO">Código de Empleado:</label>
@@ -110,6 +111,7 @@
       </form>
     </main>
   <?php
+    mysqli_close($conexion);
   }
   if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $codigo_empleado = $_POST['COD_EMPLEADO'];
@@ -133,6 +135,7 @@
     $sql = "UPDATE nomina SET salario = $salario,dias_trabajados = $dias_trabajados,salario_base = $salario_base,tipo_horas_extras = '$tipo_horas_extras',cantidad_horas_extra = $cantidad_horas_extra,valor_horas_extras = '$valor_horas_extras',comisiones = $comisiones, auxilio_transporte = $auxilio_transporte, total_devengado = $total_devengado, salud = $salud, pension = $pension,          prestamos = $prestamos, total_deducido = $total_deducido,neto_pagar = $neto_pagar WHERE cod_nomina = $codigo;";
     mysqli_query($conexion, $sql) or die(err($conexion));
     echo "<p>¡Nomina actualizado correctamente!</p>";
+    mysqli_close($conexion);
   }
   ?>
 </body>

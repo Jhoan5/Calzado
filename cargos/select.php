@@ -40,11 +40,13 @@
       }
       $registros = mysqli_query($conexion, $sql) or die(err($conexion));
       make_table($arr, $registros, 'cargos');
+      mysqli_close($conexion);
     } else {
       $conexion = conexion();
       $sql = "SELECT * FROM cargos";
       $registros = mysqli_query($conexion, $sql) or die(err($conexion));
       make_table($arr, $registros, 'cargos');
+      mysqli_close($conexion);
     }
     ?>
   </main>

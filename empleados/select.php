@@ -40,11 +40,13 @@
             }
             $registros = mysqli_query($conexion, $sql) or die(err($conexion));
             make_table($arr, $registros, 'empleados');
+            mysqli_close($conexion);
         } else {
             $conexion = conexion();
             $sql = "SELECT * FROM empleados";
             $registros = mysqli_query($conexion, $sql) or die(err($conexion));
             make_table($arr, $registros, 'empleados');
+            mysqli_close($conexion);
         }
         ?>
     </main>

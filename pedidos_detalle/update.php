@@ -27,6 +27,7 @@
     $neto_a_pagar = $reg['NETO_A_PAFGAR'];
   ?>
     <main>
+      <h2>Modificar pedidos_detalle</h2>
       <form action="" method="post">
         <div>
           <label for="FACTURACABEZA_COD">Código de Factura Cabeza:</label>
@@ -74,6 +75,7 @@
       </form>
     </main>
   <?php
+    mysqli_close($conexion);
   }
   if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $codigo_factura_cabeza = $_POST['FACTURACABEZA_COD'];
@@ -91,6 +93,7 @@
     $sql = "UPDATE pedidos_detalle SET FACTURACABEZA_COD = '$codigo_factura_cabeza', PRODUCTO_COD = $codigo_producto, CANTIDAD = $cantidad, PRECIO_UNITARIO = $precio_unitario, TIPO_DE_PAGO = '$tipo_de_pago', SUBTOTAL = $subtotal, DESCUENTO = $descuento, IVA = $iva, NETO_A_PAFGAR = $neto_a_pagar WHERE cod_pedidodetalle = $codigo;";
     mysqli_query($conexion, $sql) or die(err($conexion));
     echo "<p>¡Pedido_detalle actualizado correctamente!</p>";
+    mysqli_close($conexion);
   }
   ?>
 </body>

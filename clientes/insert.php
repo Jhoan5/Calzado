@@ -10,7 +10,7 @@
 
 <body>
   <main>
-    <h1>Agregar cliente</h1>
+    <h2>Insertar cliente</h2>
     <form action="" method="post">
       <div>
         <label for="NOMBRE_CLIENTE">Nombre:</label>
@@ -88,6 +88,7 @@
     VALUES ('$nombre_cliente', '$apellido_cliente', '$tipo_documento', '$numero_documento', '$telefono', '$direccion', '$correo_electronico', '$sexo', '$edad', '$estado_civil')";
       mysqli_query($conexion, $sql) or die(err($conexion));
       echo "<p>cliente guardado correctamente!</p>";
+      mysqli_close($conexion);
     }
     ?>
   </main>

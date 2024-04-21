@@ -10,7 +10,7 @@
 
 <body>
   <main>
-    <h1>Agregar factura cabeza</h1>
+    <h2>Insertar factura cabeza</h2>
     <form action="" method="post">
       <div>
         <label for="FECHA_EXPEDICION">Fecha de Expedición:</label>
@@ -44,6 +44,7 @@
             VALUES ('$fecha_expedicion', '$fecha_entrega', $codigo_cliente, $codigo_empleado)";
       mysqli_query($conexion, $sql) or die(err($conexion));
       echo "<p>factura_cabeza guardado correctamente!</p>";
+      mysqli_close($conexion);
     }
     ?>
   </main>

@@ -43,11 +43,13 @@
             }
             $registros = mysqli_query($conexion, $sql) or die(err($conexion));
             make_table($arr, $registros, 'nomina', 'cod_nomina');
+            mysqli_close($conexion);
         } else {
             $conexion = conexion();
             $sql = "SELECT * FROM nomina";
             $registros = mysqli_query($conexion, $sql) or die(err($conexion));
             make_table($arr, $registros, 'nomina', 'cod_nomina');
+            mysqli_close($conexion);
         }
         ?>
     </main>

@@ -34,6 +34,7 @@
     $numero_cuenta = $reg['NUMERO_CUENTA'];
   ?>
     <main>
+      <h2>Modificar empleado</h2>
       <form action="" method="post">
         <div>
           <label for="NOMBRE_EMPLEADO">Nombre:</label>
@@ -141,6 +142,7 @@
       </form>
     </main>
   <?php
+    mysqli_close($conexion);
   }
   if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nombre_empleado = $_POST['NOMBRE_EMPLEADO'];
@@ -165,6 +167,7 @@
     $sql = "UPDATE empleados SET NOMBRE_EMPLEADO = '$nombre_empleado',APELLIDO_EMPLEADO ='$apellido_empleado', ESTADO_CIVIL = '$estado_civil', TIPO_DOCUMENTO = '$tipo_documento', NO_DOCUMENTO = '$numero_documento', DIRECCION_RESIDENCIA = '$direccion_residencia', FECHA_NACIMIENTO = '$fecha_nacimiento', SEXO = '$sexo', CORREO_ELECTRONICO = '$correo_electronico', TIPO_CONTRATO = '$tipo_contrato', JORNADA = '$jornada', RH = '$rh', FORMACION = '$nivel_formacion', EPS = '$eps',     COD_CARGO = '$codigo_cargo', NUMERO_CUENTA = '$numero_cuenta' WHERE cod_empleado = $codigo;";
     mysqli_query($conexion, $sql) or die(err($conexion));
     echo "<p>¡Empleado actualizado correctamente!</p>";
+    mysqli_close($conexion);
   }
   ?>
 </body>

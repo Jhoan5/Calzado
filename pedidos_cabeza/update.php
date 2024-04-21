@@ -21,6 +21,7 @@
     $fecha_entrega = $reg['FECHA_ENTREGA'];
   ?>
     <main>
+      <h2>Modificar pedidos_cabeza</h2>
       <form action="" method="post">
         <div>
           <label for="COD_PROVEEDOR">Código de Proveedor:</label>
@@ -40,6 +41,7 @@
       </form>
     </main>
   <?php
+    mysqli_close($conexion);
   }
   if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $codigo_proveedor = $_POST['COD_PROVEEDOR'];
@@ -51,6 +53,7 @@
     $sql = "UPDATE pedidos_cabeza SET COD_PROVEEDOR = '$codigo_proveedor', FECHA_PEDIDO = '$fecha_pedido',FECHA_ENTREGA = '$fecha_entrega' WHERE cod_pedidocabeza = $codigo;";
     mysqli_query($conexion, $sql) or die(err($conexion));
     echo "<p>¡factura_detalle actualizado correctamente!</p>";
+    mysqli_close($conexion);
   }
   ?>
 </body>

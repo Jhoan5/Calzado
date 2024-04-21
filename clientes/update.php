@@ -28,6 +28,7 @@
         $estado_civil = $reg['ESTADO_CIVIL'];
     ?>
         <main>
+            <h2>Modificar cliente</h2>
             <form action="" method="POST">
                 <div>
                     <label for="NOMBRE_CLIENTE">Nombre:</label>

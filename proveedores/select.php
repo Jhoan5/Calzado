@@ -40,11 +40,13 @@
             }
             $registros = mysqli_query($conexion, $sql) or die(err($conexion));
             make_table($arr, $registros, 'proveedores', 'cod_proveedor');
+            mysqli_close($conexion);
         } else {
             $conexion = conexion();
             $sql = "SELECT * FROM proveedores";
             $registros = mysqli_query($conexion, $sql) or die(err($conexion));
             make_table($arr, $registros, 'proveedores', 'cod_proveedor');
+            mysqli_close($conexion);
         }
         ?>
     </main>

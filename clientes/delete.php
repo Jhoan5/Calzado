@@ -10,15 +10,16 @@
 
 <body>
     <main>
-        <h1>Eliminado</h1>
+        <h2>Eliminado</h2>
         <?php
         include '../a-main.php';
-        # Delete
+        // Delete
         $conexion = conexion();
         $codigo = $_GET["cod"];
         $sql = "DELETE FROM clientes WHERE COD_CLIENTE = $codigo";
         mysqli_query($conexion, $sql) or die(err($conexion));
         echo "<p>cliente eliminado correctamente!</p>";
+        mysqli_close($conexion);
         ?>
     </main>
 </body>

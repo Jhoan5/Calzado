@@ -40,11 +40,13 @@
             }
             $registros = mysqli_query($conexion, $sql) or die(err($conexion));
             make_table($arr, $registros, 'pedidos_detalle', 'cod_pedidodetalle');
+            mysqli_close($conexion);
         } else {
             $conexion = conexion();
             $sql = "SELECT * FROM pedidos_detalle";
             $registros = mysqli_query($conexion, $sql) or die(err($conexion));
             make_table($arr, $registros, 'pedidos_detalle', 'cod_pedidodetalle');
+            mysqli_close($conexion);
         }
         ?>
     </main>

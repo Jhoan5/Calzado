@@ -10,7 +10,7 @@
 
 <body>
   <main>
-    <h1>Agregar nomina</h1>
+    <h2>Insertar nomina</h2>
     <form action="" method="post">
       <div>
         <label for="COD_EMPLEADO">Código de Empleado:</label>
@@ -109,6 +109,7 @@
             VALUES ($codigo_empleado, $salario, $dias_trabajados, $salario_base, '$tipo_horas_extras', $cantidad_horas_extra, '$valor_horas_extras', $comisiones, $auxilio_transporte, $total_devengado, $salud, $pension, $prestamos, $total_deducido, $neto_pagar)";
       mysqli_query($conexion, $sql) or die(err($conexion));
       echo "<p>nomina guardado correctamente!</p>";
+      mysqli_close($conexion);
     }
     ?>
   </main>

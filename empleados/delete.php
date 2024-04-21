@@ -10,7 +10,7 @@
 
 <body>
     <main>
-        <h1>Eliminado</h1>
+        <h2>Eliminado</h2>
         <?php
         include '../a-main.php';
         # Delete
@@ -19,6 +19,7 @@
         $sql = "DELETE FROM empleados WHERE COD_EMPLEADO = $codigo";
         mysqli_query($conexion, $sql) or die(err($conexion));
         echo "<p>empleado eliminado correctamente!</p>";
+        mysqli_close($conexion);
         ?>
     </main>
 </body>

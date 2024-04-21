@@ -10,7 +10,7 @@
 
 <body>
   <main>
-    <h1>Agregar productos</h1>
+    <h2>Insertar productos</h2>
     <form action="" method="post">
       <div>
         <label for="COD_PROVEEDOR">Código de Proveedor:</label>
@@ -73,6 +73,7 @@
     $precio_compra, $precio_venta, '$fecha_ingreso', '$fecha_expiracion')";
       mysqli_query($conexion, $sql) or die(err($conexion));
       echo "<p>producto guardado correctamente!</p>";
+      mysqli_close($conexion);
     }
     ?>
   </main>

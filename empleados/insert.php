@@ -10,7 +10,7 @@
 
 <body>
   <main>
-    <h1>Agregar empleado</h1>
+    <h2>Insertar empleado</h2>
     <form action="" method="post">
       <div>
         <label for="NOMBRE_EMPLEADO">Nombre:</label>
@@ -140,6 +140,7 @@
         VALUES ('$nombre_empleado', '$apellido_empleado', '$estado_civil', '$tipo_documento', '$numero_documento', '$direccion_residencia', '$fecha_nacimiento', '$sexo', '$correo_electronico', '$tipo_contrato', '$jornada', '$rh', '$nivel_formacion', '$eps', '$codigo_cargo', '$numero_cuenta')";
       mysqli_query($conexion, $sql) or die(err($conexion));
       echo "<p>empleado guardado correctamente!</p>";
+      mysqli_close($conexion);
     }
 
     ?>

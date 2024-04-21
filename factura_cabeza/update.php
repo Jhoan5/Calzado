@@ -22,6 +22,7 @@
     $codigo_empleado = $reg['COD_EMPLEADO'];
   ?>
     <main>
+      <h2>Modificar factura_cabeza</h2>
       <form action="" method="post">
         <div>
           <label for="FECHA_EXPEDICION">Fecha de Expedición:</label>
@@ -57,6 +58,7 @@
     $sql = "UPDATE factura_cabeza SET FECHA_EXPEDICION = '$fecha_expedicion',FECHA_ENTREGA = '$fecha_entrega',COD_CLIENTE = $codigo_cliente,COD_EMPLEADO = $codigo_empleado WHERE cod_factura = $codigo;";
     mysqli_query($conexion, $sql) or die(err($conexion));
     echo "<p>¡Factura_cabeza actualizado correctamente!</p>";
+    mysqli_close($conexion);
   }
   ?>
 </body>

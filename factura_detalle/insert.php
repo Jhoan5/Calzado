@@ -10,7 +10,7 @@
 
 <body>
   <main>
-    <h1>Agregar factura_detalle</h1>
+    <h2>Insertar factura_detalle</h2>
     <form action="" method="post">
       <div>
         <label for="FACTCAB_COD">Código de la Factura:</label>
@@ -78,6 +78,7 @@
     VALUES ($codigo_factura, '$metodo_pago', $codigo_producto, $cantidad, $precio_venta, $monto, $subtotal, $iva, $descuento, $neto_pagar)";
       mysqli_query($conexion, $sql) or die(err($conexion));
       echo "<p>factura_detalle guardado correctamente!</p>";
+      mysqli_close($conexion);
     }
     ?>
   </main>

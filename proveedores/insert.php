@@ -10,7 +10,7 @@
 
 <body>
   <main>
-    <h1>Agregar proveedor</h1>
+    <h2>Insertar proveedor</h2>
     <form action="" method="post">
       <div>
         <label for="RAZON_SOCIAL">Razón Social:</label>
@@ -81,6 +81,7 @@
     '$correo_representante')";
       mysqli_query($conexion, $sql) or die(err($conexion));
       echo "<p>proveedor guardado correctamente!</p>";
+      mysqli_close($conexion);
     }
     ?>
   </main>

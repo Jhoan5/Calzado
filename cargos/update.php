@@ -21,7 +21,7 @@
         $salario_base = $reg['SALARIO_BASE'];
     ?>
         <main>
-            <h1>Actualizar cargo</h1>
+            <h2>Modificar cargo</h2>
             <form action="" method="POST">
                 <div>
                     <label for="NOM_CARGO">Nombre del Cargo:</label>
@@ -44,6 +44,7 @@
             </form>
         </main>
     <?php
+        mysqli_close($conexion);
     }
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $nombre_cargo = $_POST['NOM_CARGO'];
@@ -55,6 +56,7 @@
         $sql = "UPDATE cargos SET NOM_CARGO = '$nombre_cargo', UBICACION_CARGO = '$ubicacion_cargo', SALARIO_BASE = '$salario_base' WHERE COD_CARGO = '$codigo'";
         mysqli_query($conexion, $sql) or die(err($conexion));
         echo "<p>¡Cargo actualizado correctamente!</p>";
+        mysqli_close($conexion);
     }
     ?>
 </body>

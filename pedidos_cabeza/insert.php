@@ -10,7 +10,7 @@
 
 <body>
   <main>
-    <h1>Agregar pedidos_cabeza</h1>
+    <h2>Insertar pedidos_cabeza</h2>
     <form action="" method="post">
       <div>
         <label for="COD_PROVEEDOR">Código de Proveedor:</label>
@@ -39,6 +39,7 @@
     VALUES ('$codigo_proveedor', '$fecha_pedido', '$fecha_entrega')";
       mysqli_query($conexion, $sql) or die(err($conexion));
       echo "<p>pedidos_cabeza guardado correctamente!</p>";
+      mysqli_close($conexion);
     }
     ?>
   </main>

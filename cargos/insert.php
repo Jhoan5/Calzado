@@ -10,7 +10,7 @@
 
 <body>
   <main>
-    <h1>Agregar cargo</h1>
+    <h2>Insertar cargo</h2>
     <form action="" method="post">
       <div>
         <label for="NOM_CARGO">Nombre del Cargo:</label>
@@ -32,7 +32,7 @@
       </div>
     </form>
     <?php
-    include '../a-main.php'; # conexion() // err()
+    include '../a-main.php';
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
       $nombre_cargo = $_POST['NOM_CARGO'];
@@ -42,6 +42,7 @@
       $sql = "INSERT INTO cargos(NOM_CARGO,UBICACION_CARGO, SALARIO_BASE) VALUES ('$nombre_cargo','$ubicacion_cargo',$salario_base);";
       mysqli_query($conexion, $sql) or die(err($conexion));
       echo "<p>¡Cargo guardado correctamente!</p>";
+      mysqli_close($conexion);
     }
     ?>
   </main>

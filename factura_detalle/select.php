@@ -40,11 +40,13 @@
             }
             $registros = mysqli_query($conexion, $sql) or die(err($conexion));
             make_table($arr, $registros, 'factura_detalle', 'cod_factura_detalle');
+            mysqli_close($conexion);
         } else {
             $conexion = conexion();
             $sql = "SELECT * FROM factura_detalle";
             $registros = mysqli_query($conexion, $sql) or die(err($conexion));
             make_table($arr, $registros, 'factura_detalle', 'cod_factura_detalle');
+            mysqli_close($conexion);
         }
         ?>
     </main>

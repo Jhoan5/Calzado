@@ -10,7 +10,7 @@
 
 <body>
   <main>
-    <h1>Agregar pedidos_detalle</h1>
+    <h2>Insertar pedidos_detalle</h2>
     <form action="" method="post">
       <div>
         <label for="FACTURACABEZA_COD">Código de Factura Cabeza:</label>
@@ -75,6 +75,7 @@
     '$tipo_de_pago', $subtotal, $descuento, $iva, $neto_a_pagar)";
       mysqli_query($conexion, $sql) or die(err($conexion));
       echo "<p>pedido_detalle guardado correctamente!</p>";
+      mysqli_close($conexion);
     }
     ?>
   </main>

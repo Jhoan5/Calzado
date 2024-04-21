@@ -10,15 +10,16 @@
 
 <body>
     <main>
-        <h1>Eliminado</h1>
+        <h2>Eliminado</h2>
         <?php
         include '../a-main.php';
-        # Delete
+        // Delete
         $conexion = conexion();
         $codigo = $_GET["cod"];
         $sql = "DELETE FROM factura_cabeza WHERE COD_FACTURA = $codigo";
         mysqli_query($conexion, $sql) or die(err($conexion));
         echo "<p>factura cabeza eliminado correctamente!</p>";
+        mysqli_close($conexion);
         ?>
     </main>
 </body>
