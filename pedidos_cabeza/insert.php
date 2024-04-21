@@ -14,15 +14,15 @@
     <form action="" method="post">
       <div>
         <label for="COD_PROVEEDOR">Código de Proveedor:</label>
-        <input type="text" name="COD_PROVEEDOR" id="COD_PROVEEDOR" required />
+        <input type="text" name="COD_PROVEEDOR" id="COD_PROVEEDOR" value="<?php echo $codigo_proveedor; ?>" required />
       </div>
       <div>
         <label for="FECHA_PEDIDO">Fecha de Pedido:</label>
-        <input type="date" name="FECHA_PEDIDO" id="FECHA_PEDIDO" required />
+        <input type="date" name="FECHA_PEDIDO" id="FECHA_PEDIDO" value="<?php echo $fecha_pedido; ?>" required />
       </div>
       <div>
         <label for="FECHA_ENTREGA">Fecha de Entrega:</label>
-        <input type="date" name="FECHA_ENTREGA" id="FECHA_ENTREGA" required />
+        <input type="date" name="FECHA_ENTREGA" id="FECHA_ENTREGA" value="<?php echo $fecha_entrega; ?>" required />
       </div>
       <div>
         <button type="submit">Guardar</button>

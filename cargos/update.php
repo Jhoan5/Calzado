@@ -12,7 +12,7 @@
     <?php
     include '../a-main.php'; // Archivo que contiene la función conexion() y err()
     $conexion = conexion();
-    $codigo = $_GET["cod_cargo"];
+    $codigo = $_GET["cod"];
     $sql = "SELECT * FROM cargos WHERE cod_cargo = $codigo";
     $registros = mysqli_query($conexion, $sql) or die(err($conexion));
     if ($reg = mysqli_fetch_array($registros)) {
@@ -51,7 +51,7 @@
         $salario_base = $_POST['SALARIO_BASE'];
         $conexion = conexion();
         // Update
-        $codigo = $_GET["cod_cargo"];
+        $codigo = $_GET["cod"];
         $sql = "UPDATE cargos SET NOM_CARGO = '$nombre_cargo', UBICACION_CARGO = '$ubicacion_cargo', SALARIO_BASE = '$salario_base' WHERE COD_CARGO = '$codigo'";
         mysqli_query($conexion, $sql) or die(err($conexion));
         echo "<p>¡Cargo actualizado correctamente!</p>";
