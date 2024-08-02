@@ -8,19 +8,56 @@
   </head>
   <body>
     <header>
-      <h1>Calzado</h1>
+      <div>
+        <img
+          src="https://avatars.githubusercontent.com/u/125749979?v=4"
+          alt="Logo"
+        />
+        <h1>Calzado</h1>
+      </div>
+      <!-- Start nav -->
+      <nav>
+        <div class="dropdown">
+          <a href="./index.html" class="dropbtn">Inicio</a>
+        </div>
+        <!-- Insert -->
+        <div class="dropdown">
+          <button class="dropbtn">Insertar <small>▼</small></button>
+          <div class="dropdown-content">
+            <a href="./cargos/insert.php">Cargos</a>
+            <a href="./clientes/insert.php">Clientes</a>
+            <a href="./empleados/insert.php">Empleados</a>
+            <a href="./factura_cabeza/insert.php">Factura_cabeza</a>
+            <a href="./factura_detlle/insert.php">Factura_detalle</a>
+            <a href="./nomina/insert.php">Nómina</a>
+            <a href="./pedidos_cabeza/insert.php">Pedidos_cabeza</a>
+            <a href="./pedidos_detalle/insert.php">Pedidos_detalle</a>
+            <a href="./productos/insert.php">Productos</a>
+            <a href="./proveedores/insert.php">Proveedores</a>
+          </div>
+        </div>
+        <!-- Select - update - delete -->
+        <div class="dropdown">
+          <button class="dropbtn">Buscar y Modificar <small>▼</small></button>
+          <div class="dropdown-content">
+            <a href="./cargos/select.php">Cargos</a>
+            <a href="./clientes/select.php">Clientes</a>
+            <a href="./empleados/select.php">Empleados</a>
+            <a href="./factura_cabeza/select.php">Factura_cabeza</a>
+            <a href="./factura_detlle/select.php">Factura_detalle</a>
+            <a href="./nomina/select.php">Nómina</a>
+            <a href="./pedidos_cabeza/select.php">Pedidos_cabeza</a>
+            <a href="./pedidos_detalle/select.php">Pedidos_detalle</a>
+            <a href="./productos/select.php">Productos</a>
+            <a href="./proveedores/select.php">Proveedores</a>
+          </div>
+        </div>
+      </nav>
+      <!-- End nav -->
     </header>
     <main>
-      <h2>Menu de enlaces</h2>
-      <article>
-        <h3>Cargos</h3>
-        <ul>
-          <li><a href="./cargos/insert.php">Insertar registros</a></li>
-          <li>
-            <a href="./cargos/select.php">Buscar registros y modificar</a>
-          </li>
-        </ul>
-      </article>
+      <h2>Más contenido en próximas versiones</h2>
+      <a href="https://github.com/Jhoan5">Jhoan</a>
     </main>
   </body>
 </html>
